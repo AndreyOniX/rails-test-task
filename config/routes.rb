@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    namespace :v1 do
+      # HACK - bad practice
+      post '/tt/0413' => 'tt0413s#create'
+    end
+  end
+
 end
