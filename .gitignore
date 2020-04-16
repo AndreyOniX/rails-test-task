@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -17,7 +18,22 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore node_modules.
 /node_modules
+
+# Ignore yarn files.
 /yarn-error.log
 
+# Ignore Byebug command history file.
 .byebug_history
+
+# Ignore environment variables.
+.env
+
+# Ignore precompiled javascript packs.
+/public/assets
+/public/system
+
+# Ignore RubyMine project files.
+.idea
+
