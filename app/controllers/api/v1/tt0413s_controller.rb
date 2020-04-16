@@ -13,6 +13,11 @@ module Api
         end
       end
 
+      def index
+        tt0413s = Tt0413.all
+        render json: {data: tt0413s}
+      end
+
       private
 
       def tt0413_params

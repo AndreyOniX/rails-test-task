@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       post 'authenticate', to: 'authentication#create'
 
       # HACK - bad practice
+      get '/tt/0413' => 'tt0413s#index'
       post '/tt/0413' => 'tt0413s#create'
     end
   end
