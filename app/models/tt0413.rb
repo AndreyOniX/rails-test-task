@@ -10,4 +10,15 @@ class Tt0413 < ApplicationRecord
   validates :job, presence: true, length: { minimum: 2, maximum: 100 }
   validates :country, presence: true, length: { minimum: 2, maximum: 100 }
 
+  def self.to_csv
+    attributes = column_names
+    options = {headers: true}
+    CSV.generate(options) do |csv|
+      csv << attributes
+      all.each do |item|
+        csv << attributes.map{ |attr| item.send(attr) }
+      end
+    end
+  end
+
 end
