@@ -67,3 +67,6 @@ gem 'rack-attack', '~> 6.2'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1'
+
+# Paginator
+gem 'kaminari', '~> 1.2'

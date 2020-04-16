@@ -18,4 +18,11 @@
   </table>
 </div>
 
-<%= link_to 'Download CSV', format: :csv %>
+<div>
+  <%= paginate @tt0413s %>
+  <%= page_entries_info @tt0413s, entry_name: 'item' %>
+</div>
+
+<div>
+  <%= link_to 'Download CSV', format: :csv %>
+</div>
