@@ -1,0 +1,19 @@
+<h3>List of submissions</h3>
+<div>
+  <table class="table">
+    <tbody>
+    <% @tt0413s.each do |tt0413| %>
+      <tr>
+        <td><%= tt0413.first_name %></td>
+        <td><%= tt0413.last_name %></td>
+        <td><%= tt0413.email %></td>
+        <td><%= tt0413.phone %></td>
+        <td><%= tt0413.company %></td>
+        <td><%= tt0413.job %></td>
+        <td><%= tt0413.country %></td>
+        <td><%= tt0413.created_at %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
