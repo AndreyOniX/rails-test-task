@@ -10,7 +10,9 @@ class Rack::Attack
   end
 
   # Allow an IP address to make 5 requests every 2 seconds
-  throttle('req/ip', limit: 5, period: 2, &:ip)
+  throttle('req/ip', limit: 5, period: 5) do |req|
+    req.ip unless req.path.start_with?('/assets')
+  end
 
   # Send the following response to throttled clients
   self.throttled_response = lambda do |env|

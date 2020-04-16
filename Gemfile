@@ -54,6 +54,8 @@ group :development do
   # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Rails app layouts
+  gem 'rails_layout', '~> 1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -70,3 +72,6 @@ gem 'bcrypt', '~> 3.1'
 
 # Paginator
 gem 'kaminari', '~> 1.2'
+
+gem 'bootstrap', '~> 4.4'
+gem 'jquery-rails', '~> 4.3'
