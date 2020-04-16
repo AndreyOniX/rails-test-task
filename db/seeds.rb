@@ -8,3 +8,8 @@
 
 user = CreateAdminService.new.call
 puts 'Created admin user: ' << user.login
+
+unless Rails.env.production?
+  AddFormSubmissionsService.new.call
+  puts 'Added form submissions'
+end
