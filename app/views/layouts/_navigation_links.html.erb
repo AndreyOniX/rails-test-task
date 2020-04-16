@@ -1,1 +1,12 @@
-<%# add navigation links to this file %>
+<% if logged_in? %>
+  <div class='nav_item'>
+    <%= link_to 'Submissions', submissions_path, class: 'btn btn-outline-success mx-3' %>
+  </div>
+  <div class='nav_item'>
+    <%= link_to 'Log out', logout_path, class: 'btn btn-outline-primary' %>
+  </div>
+<% else # logged out %>
+  <div class='nav_item'>
+    <%= link_to 'Log in', login_path, class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>

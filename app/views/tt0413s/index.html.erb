@@ -1,6 +1,21 @@
-<h3>List of submissions</h3>
-<div>
-  <table class="table">
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <h3 class="h3 mb-0 font-weight-normal">List of submissions</h3>
+  <%= link_to 'Download CSV', {format: :csv}, {class: 'd-inline-block btn btn-outline-success'} %>
+</div>
+<div class="table-responsive">
+  <table class="table table-sm table-hover">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Company</th>
+        <th scope="col">Job</th>
+        <th scope="col">Country</th>
+        <th scope="col">Created At</th>
+      </tr>
+    </thead>
     <tbody>
     <% @tt0413s.each do |tt0413| %>
       <tr>
@@ -17,12 +32,11 @@
     </tbody>
   </table>
 </div>
-
-<div>
-  <%= paginate @tt0413s %>
-  <%= page_entries_info @tt0413s, entry_name: 'item' %>
-</div>
-
-<div>
-  <%= link_to 'Download CSV', format: :csv %>
+<div class="table-pagination">
+  <div class="float-left pagination-detail">
+    <%= page_entries_info @tt0413s, entry_name: 'item' %>
+  </div>
+  <div class="float-right pagination">
+    <%= paginate @tt0413s %>
+  </div>
 </div>

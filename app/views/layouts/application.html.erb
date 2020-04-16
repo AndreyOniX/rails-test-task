@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Test Task" %></title>
@@ -8,13 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+    <main role="main" class="flex-shrink-0">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    <footer class="footer mt-auto py-3 bg-white border-top shadow-sm">
+      <div class="container">
+        <%= render 'layouts/footer' %>
+      </div>
+    </footer>
   </body>
 </html>

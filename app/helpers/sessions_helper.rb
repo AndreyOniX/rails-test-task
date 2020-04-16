@@ -9,7 +9,7 @@ module SessionsHelper
   end
 
   def after_sign_in(to_url = nil)
-    redirect_url = to_url.blank? ? '/' : to_url.to_s
+    redirect_url = to_url.blank? ? root_path : to_url.to_s
     redirect_to redirect_url, notice: "Welcome, you've logged in."
   end
 
