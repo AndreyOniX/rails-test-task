@@ -61,3 +61,6 @@ gem 'rack-cors', '~> 1.1'
 
 # Rack Middleware for throttling and blocking abusive requests.
 gem 'rack-attack', '~> 6.2'
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1'

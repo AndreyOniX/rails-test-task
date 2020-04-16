@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200416084137) do
+ActiveRecord::Schema.define(version: 20200416131858) do
 
   create_table "tt-0413", force: :cascade do |t|
     t.string "first_name", limit: 100, null: false
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20200416084137) do
     t.string "job", limit: 100, null: false
     t.string "country", limit: 100, null: false
     t.datetime "created_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", limit: 100
+    t.string "login", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["login"], name: "index_users_on_login", unique: true
   end
 
 end
