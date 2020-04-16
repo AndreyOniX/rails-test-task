@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     authenticator = AuthenticateUserWithCredentials.new(params[:login], params[:password])
     if authenticator.authenticate
       sign_in authenticator.user
-      after_sign_in
+      after_sign_in submissions_path
     else
       flash.now[:alert] = 'Email or password is invalid'
       render 'new'
