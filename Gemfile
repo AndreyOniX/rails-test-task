@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Rack Middleware for handling Cross-Origin Resource Sharing.
 gem 'rack-cors', '~> 1.1'
+
+# Rack Middleware for throttling and blocking abusive requests.
+gem 'rack-attack', '~> 6.2'

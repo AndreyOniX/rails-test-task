@@ -2,4 +2,10 @@
 
 require_relative 'config/environment'
 
+require 'rack/cors'
+use Rack::Cors
+
+require 'rack/attack'
+use Rack::Attack
+
 run Rails.application
