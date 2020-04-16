@@ -73,5 +73,10 @@ gem 'bcrypt', '~> 3.1'
 # Paginator
 gem 'kaminari', '~> 1.2'
 
+# Bootstrap framework
 gem 'bootstrap', '~> 4.4'
 gem 'jquery-rails', '~> 4.3'
+
+# JWT Tokens
+gem 'jwt', '~> 2.2'
+gem 'simple_command', '~> 0.1.0'

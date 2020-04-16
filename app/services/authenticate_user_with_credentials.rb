@@ -1,7 +1,7 @@
 class AuthenticateUserWithCredentials < AuthenticateUser
-  def initialize(email, password)
+  def initialize(login, password)
   	super()
-    @login = email
+    @login = login
     @password = password
   end
   

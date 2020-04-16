@@ -2,6 +2,8 @@ module Api
   module V1
     class Tt0413sController < ApiController
 
+      skip_before_action :authenticate_request, only: [:create]
+
       def create
         tt0413 = Tt0413.new(tt0413_params)
         if tt0413.save
