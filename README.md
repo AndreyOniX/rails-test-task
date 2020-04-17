@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Test Task.
 
-Things you may want to cover:
+## Technical task
+[PDF](public/tt.pdf)
 
-* Ruby version
+## Environment
 
-* System dependencies
+### Ruby version
 
-* Configuration
+* Ruby 2.4.5
+* Rails 5.1.7
 
-* Database creation
+### Configuration
+`bundle install`
 
-* Database initialization
+### Database creation
+`rake db:create`
 
-* How to run the test suite
+### Database initialization
+`rake db:schema:load`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Database seeding
+`rake db:seed`
 
-* Deployment instructions
+### How to run the test suite
+`rails server --binding=IP --port=PORT`
 
-* ...
+## Demo credentials
+
+* Login: guest
+* Password: qwerty
+
+## API specification
+[Docs](api_doc.md)
