@@ -1,0 +1,458 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-df79aefb.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-d50da5f7.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-721d054c.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <!--
+      <img src="images/logo-eaf2df27.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+        </div>
+      -->
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-new-jwt" class="toc-h2 toc-link" data-title="Creating a new JWT">Creating a new JWT</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#submissions" class="toc-h1 toc-link" data-title="Submissions">Submissions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-new-submission" class="toc-h2 toc-link" data-title="Creating a new submission">Creating a new submission</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-submissions" class="toc-h2 toc-link" data-title="Get all submissions">Get all submissions</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p><strong><em>Last Update:</em></strong> April 17th, 2020</p>
+
+<p>Welcome to the Rails Test Task API!</p>
+
+<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>.</p>
+<h2 id='api-endpoints'>API Endpoints</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>URL</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/api/v1/tt/0413</td>
+<td>Create a new submission</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/v1/authenticate</td>
+<td>Creates a new JWT</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/v1/tt/0413</td>
+<td>Get a list of submissions</td>
+</tr>
+</tbody></table>
+<h2 id='getting-started'>Getting Started</h2>
+<p>Requests should use domain which backend server has been installed. This document uses paths relative to this host.</p>
+
+<p>A setup at a high level will go as follows:</p>
+
+<ol>
+<li><p>Create a new submission.</p></li>
+<li><p>Create a JWT with user.</p></li>
+<li><p>View the list of submissions.</p></li>
+</ol>
+<h1 id='authentication'>Authentication</h1><h2 id='creating-a-new-jwt'>Creating a new JWT</h2><h3 id='request'>Request</h3>
+<p><code>GET /api/v1/authenticate</code></p>
+
+<blockquote>
+<p>Use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl /api/v1/authenticate 
+  -H <span class="s2">"Content-Type: application/json"</span> 
+  -X POST -d <span class="s1">'{"login":"guest","password":"qwerty"}'</span>
+</code></pre><h3 id='successful-response'>Successful Response</h3>
+<p><code>{&quot;auth_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODcyMDg4NDd9.mn-hTAd--TISOr-B_wZXvjVHP_D4SGKMAw-mTu6LJDk&quot;}</code></p>
+<h3 id='unsuccessful-response'>Unsuccessful Response</h3>
+<p><code>{&quot;error&quot;:{&quot;user_authentication&quot;:&quot;invalid credentials&quot;}}</code></p>
+
+<blockquote>
+<p>200 - OK:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODcyMDg4NDd9.mn-hTAd--TISOr-B_wZXvjVHP_D4SGKMAw-mTu6LJDk"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>401 - Unauthorized:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"user_authentication"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invalid credentials"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='submissions'>Submissions</h1><h2 id='creating-a-new-submission'>Creating a new submission</h2><h3 id='request-2'>Request</h3>
+<p><code>POST /api/v1/tt/0413</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first_name</td>
+<td>String</td>
+<td>Required. First name.</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>String</td>
+<td>Required. Last name.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>Required. Email.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>String</td>
+<td>Required. Phone.</td>
+</tr>
+<tr>
+<td>company</td>
+<td>String</td>
+<td>Required. Company.</td>
+</tr>
+<tr>
+<td>job</td>
+<td>String</td>
+<td>Required. Job.</td>
+</tr>
+<tr>
+<td>country</td>
+<td>String</td>
+<td>Required. Country.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl /api/v1/tt/0413 
+  -H <span class="s2">"Content-Type: application/json"</span> 
+  -X POST -d <span class="s1">'{"first_name":"Alvaro", "last_name":"Schaefer", "email":"alvaro_schaefer@douglas.co.uk", "phone":"530-619-2127", "company":"Gottlieb and Sons", "job":"Customer Branding Strategist", "country":"Croatia"}'</span>
+</code></pre><h3 id='successful-response-2'>Successful Response</h3>
+<p>Response body is empty.</p>
+
+<blockquote>
+<p>201 - Created</p>
+</blockquote>
+<h3 id='unsuccessful-response-2'>Unsuccessful Response</h3>
+<p><code>{&quot;errors&quot;:{&quot;email&quot;:[&quot;can&#39;t be blank&quot;,&quot;is not an email&quot;]}}</code></p>
+
+<blockquote>
+<p>400 - Bad request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"can't be blank"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is not an email"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-all-submissions'>Get all submissions</h2><h3 id='request-3'>Request</h3>
+<p><code>GET /api/v1/tt/0413</code></p>
+
+<p>This endpoint retrieves all submissions.</p>
+
+<blockquote>
+<p>Use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl /api/v1/tt/0413 -H <span class="s2">"Authorization: jwt"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>jwt</code> with your user JWT.</p>
+</blockquote>
+
+<aside class="notice">
+You must replace <code>jwt</code> with your personal JWT.
+</aside>
+<h3 id='response'>Response</h3>
+<blockquote>
+<p>200 - OK:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monnie"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kihn"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mireille@bernhard.name"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"383-712-4688"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"McClure, Lueilwitz and Lang"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"job"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Branding Strategist"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cape Verde"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-17T09:48:53.390Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alvaro"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Schaefer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alvaro_schaefer@douglas.co.uk"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"530-619-2127"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gottlieb and Sons"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"job"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Branding Strategist"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Croatia"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-17T09:48:53.620Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>401 - Unauthorized:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Not Authorized"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
