@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get '/' => redirect('/api_doc/index.html')
+
       post 'authenticate', to: 'authentication#create'
 
       # HACK - bad practice
