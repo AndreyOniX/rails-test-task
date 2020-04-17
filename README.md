@@ -27,10 +27,20 @@ Rails Test Task.
 ### How to run the test suite
 `rails server --binding=IP --port=PORT`
 
-## Demo credentials
+## API specification
+[Docs](api_doc.md)
 
+## Demo
+
+Available on Heroku.
+
+Link: 
+[https://cryptic-wave-77948.herokuapp.com/](https://cryptic-wave-77948.herokuapp.com/)
+
+Credentials:
 * Login: guest
 * Password: qwerty
 
-## API specification
-[Docs](api_doc.md)
+API Documentation:
+[https://cryptic-wave-77948.herokuapp.com/api_doc/index.html](https://cryptic-wave-77948.herokuapp.com/api_doc/index.html)
+
